@@ -6,8 +6,8 @@ import { Observable } from "rxjs";
   providedIn: "root",
 })
 export class MapService {
-  distanceMatrixKey = "AIzaSyAbBRHFCr2ZmQxNUCF52VRKjUb3XEGzGg8";
-  locationGeocodingKey = "AIzaSyAbBRHFCr2ZmQxNUCF52VRKjUb3XEGzGg8";
+  distanceMatrixKey = "AIzaSyBInoAl7bllsKrlpM1vsYwyFQiSWngYXEg";
+  locationGeocodingKey = "AIzaSyBInoAl7bllsKrlpM1vsYwyFQiSWngYXEg";
   constructor(private http: HttpClient) {}
   getDistance(departure, destination): Observable<any> {
     return this.http.get<any>(

@@ -1,4 +1,5 @@
 import Chart from "chart.js";
+
 //
 // Chart extension for making the bars rounded
 // Code from: https://codepen.io/jedtrow/full/ygRYgo
@@ -298,7 +299,7 @@ export const chartExample1 = {
           ticks: {
             callback: function (value) {
               if (!(value % 10)) {
-                return "$" + value + "k";
+                return value + " DT";
               }
             },
           },
@@ -307,11 +308,11 @@ export const chartExample1 = {
     },
   },
   data: {
-    labels: ["May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    labels: ["May", "Jun", "Jul"],
     datasets: [
       {
         label: "Performance",
-        data: [0, 20, 10, 30, 15, 40, 20, 60, 60],
+        data: [0, 20, 10, 0, 15, 40, 20, 60, 10],
       },
     ],
   },
@@ -324,8 +325,7 @@ export const chartExample2 = {
         {
           ticks: {
             callback: function (value) {
-              if (!(value % 10)) {
-                //return '$' + value + 'k'
+              if (!(value % 1)) {
                 return value;
               }
             },
